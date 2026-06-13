@@ -270,6 +270,25 @@
  transform: translate(-50%, -50%) scale(0);
  animation: instaPop 0.7s cubic-bezier(0.17, 0.89, 0.32, 1.28) forwards;
  }
+
+ .cover-invite {
+ font-size: 12px;
+ color: #888;
+ text-align: center;
+ line-height: 1.8;
+ padding: 0 32px;
+ }
+ .cover-invite span { color: var(--orange); font-weight: 800; }
+
+ .cover-label { animation: coverFadeDown 0.7s ease 0.2s both; }
+ .cover-names { animation: coverScaleIn 0.8s cubic-bezier(0.17,0.89,0.32,1.28) 0.5s both; }
+ .cover-divider { animation: coverFadeUp 0.6s ease 1.0s both; }
+ .cover-date { animation: coverFadeUp 0.6s ease 1.2s both; }
+ .cover-invite { animation: coverFadeUp 0.6s ease 1.4s both; }
+ .cover-btn { animation: coverFadeUp 0.7s ease 1.7s both, btnBounce 1.6s ease-in-out 2.4s infinite; }
+ .cover-inner::before { animation: coverLeafL 1s ease 0.3s both; }
+ .cover-inner::after { animation: coverLeafR 1s ease 0.3s both; }
+
  .sah-pop {
  position: absolute;
  pointer-events: none;
@@ -928,9 +947,7 @@
  <div class="cover-divider"></div>
  <p class="cover-date">07 . 08 . 2026</p>
  <div class="cover-divider"></div>
- <p class="cover-label">
-    Untuk <span id="guest-name">Bapak/Ibu/Saudara</span>
-</p>
+ <p class="cover-invite">Untuk <span id="cover-guest-name">Bapak/Ibu/Saudara</span></p>
  <button class="cover-btn" id="cover-btn">Buka Undangan</button>
  </div>
 </div>
@@ -1103,7 +1120,7 @@
 
  <section class="section">
  <p class="sec-body photo-desc" id="photo-desc">
-    Gak ngira bakal ngobrol
+ Gak ngira bakal ngobrol
  </p>
  </section>
 
@@ -1144,12 +1161,14 @@
  <textarea id="rsvp-pesan" class="rsvp-input rsvp-textarea" placeholder="Tulis pesanmu di sini..."></textarea>
  </div>
 
+ <input type="hidden" id="rsvp-city">
+
  <button type="submit" class="rsvp-submit">Kirim</button>
 
  <div id="rsvp-success" style="display:none; text-align:center; margin-top:16px;">
  <p class="sec-body" style="color: var(--orange);">
-    Terima kasih! Kami menantikan kehadiranmu 🎉
-    (refresh undangan untuk melihat ucapan anda)
+ Terima kasih! Kami menantikan kehadiranmu 🎉
+ (refresh undangan untuk melihat ucapan anda)
  </p>
  </div>
 
@@ -1212,6 +1231,8 @@
  const name = raw.replace(/([A-Z])/g, ' $1').trim();
  const el = document.getElementById('guest-name');
  if (el) el.textContent = name;
+ const coverEl = document.getElementById('cover-guest-name');
+ if (coverEl) coverEl.textContent = name;
  if (nameInput) nameInput.value = name;
  } else {
  if (nameInput) nameInput.value = '';
@@ -1273,6 +1294,15 @@ initCarousel(
  ]
  );
 
+ // ── City auto-fill ────────────────────────────────
+ (function() {
+ const url = window.location.href.toLowerCase();
+ const city = url.includes('auzanaisya') ? 'surabaya'
+ : url.includes('aisyaauzan') ? 'kediri'
+ : 'None';
+ document.getElementById('rsvp-city').value = city;
+ })();
+
  // ── RSVP ──────────────────────────────────────────
  window.addEventListener('load', () => {
  document.getElementById('rsvp-form').reset();
@@ -1291,6 +1321,13 @@ initCarousel(
  nameInput.style.cursor = 'not-allowed';
  }
  }
+
+ // Re-apply city after reset
+ const url = window.location.href.toLowerCase();
+ const city = url.includes('auzanaisya') ? 'surabaya'
+ : url.includes('aisyaauzan') ? 'kediri'
+ : 'None';
+ document.getElementById('rsvp-city').value = city;
  });
 
  let attendValue = null;
@@ -1350,8 +1387,11 @@ initCarousel(
  nama: document.getElementById('rsvp-nama').value.trim(),
  attend: attendValue === 'yes' ? 'Ya' : 'Tidak',
  orang: attendValue === 'yes' ? document.getElementById('rsvp-orang').value : '',
- pesan: document.getElementById('rsvp-pesan').value.trim()
+ pesan: document.getElementById('rsvp-pesan').value.trim(),
+ city: document.getElementById('rsvp-city').value
  };
+
+ console.log('RSVP Payload:', payload);
 
  const btn = document.querySelector('.rsvp-submit');
  btn.textContent = 'Mengirim...';
