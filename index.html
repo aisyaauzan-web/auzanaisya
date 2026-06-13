@@ -1296,9 +1296,9 @@ initCarousel(
 
  // ── City auto-fill ────────────────────────────────
  (function() {
- const url = window.location.href.toLowerCase();
- const city = url.includes('auzanaisya') ? 'surabaya'
- : url.includes('aisyaauzan') ? 'kediri'
+ const path = window.location.pathname.toLowerCase();
+ const city = path.includes('auzanaisya') ? 'surabaya'
+ : path.includes('aisyaauzan') ? 'kediri'
  : 'None';
  document.getElementById('rsvp-city').value = city;
  })();
