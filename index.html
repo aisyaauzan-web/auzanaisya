@@ -3,7 +3,8 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Pernikahan Auzan & Aisya</title>
+ <title>Ngunduh Mantu Auzan & Aisya</title>
+ <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico">
  <style>
  @font-face {
  font-family: 'SingleDay-Regular';
@@ -19,15 +20,15 @@
 
  :root {
  --orange: #FF7724;
- --blue: #3568FD;
+ --blue: #298CFE;
  --blue-lt: #626DD4;
- --cream: #FEFCF0;
+ --cream: #F5FEFF;
  --text: #444;
  --muted: #999;
  }
 
  body {
- background: #F5EFD8;
+ background: #EEFCFE;
  font-family: 'SingleDay-Regular', sans-serif;
  color: var(--text);
  overflow-x: hidden;
@@ -78,7 +79,7 @@
  /* Names */
  .hero-names {
  font-size: clamp(40px, 15vw, 64px);
- color: #FFBA26;
+ color: #298CFE;
  line-height: 0.9;
  text-align: center;
  position: relative;
@@ -98,7 +99,7 @@
  padding-right: 20px;
  }
  .hero-names .amp-and {
- color: #4A66F5;
+ color: #FFBA26;
  font-size: clamp(28px, 10.5vw, 45px);
  }
 
@@ -157,7 +158,7 @@
  display: block;
  text-align: center;
  font-size: clamp(26px, 9.75vw, 41.6px);
- color: var(--blue);
+ color: var(--orange);
  letter-spacing: 1px;
  margin-top: 8px;
 
@@ -172,14 +173,14 @@
  top: 16px;
  width: 76px;
  height: 76px;
- border: 2px solid var(--blue);
+ border: 2px solid var(--orange);
  border-radius: 50%;
  display: flex;
  align-items: center;
  justify-content: center;
  text-align: center;
  font-size: 10px;
- color: var(--blue);
+ color: var(--orange);
  font-weight: 600;
  line-height: 1.4;
  z-index: 4;
@@ -278,7 +279,7 @@
  line-height: 1.8;
  padding: 0 32px;
  }
- .cover-invite span { color: var(--orange); font-weight: 800; }
+ .cover-invite span { color: var(--blue); font-weight: 800; }
 
  .cover-label { animation: coverFadeDown 0.7s ease 0.2s both; }
  .cover-names { animation: coverScaleIn 0.8s cubic-bezier(0.17,0.89,0.32,1.28) 0.5s both; }
@@ -295,7 +296,7 @@
  z-index: 20;
  font-family: 'SingleDay-Regular', sans-serif;
  font-size: 28px;
- color: var(--orange);
+ color: var(--blue);
  font-weight: 800;
  animation: sahFloat 1.2s cubic-bezier(0.17, 0.89, 0.32, 1.28) forwards;
  transform: translate(-50%, -50%);
@@ -354,7 +355,7 @@
  .sec-title {
 
  font-size: 46px;
- color: var(--orange);
+ color: var(--blue);
  text-align: center;
  margin-bottom: 14px;
  }
@@ -392,13 +393,13 @@
  justify-content: center;
  font-size: 14px;
  font-weight: 600;
- color: #FFBA26;
+ color: #7BB8FF;
  transition: background .25s, color .25s, transform .25s;
  cursor: default;
  }
  .date-chip.active {
  background: transparent;
- color: #FF7724;
+ color: var(--orange);
  transform: none;
  box-shadow: none;
  position: relative;
@@ -494,7 +495,7 @@
 
  .jadwal-title {
  font-size: 46px;
- color: var(--orange);
+ color: var(--blue);
  margin-bottom: 28px;
  text-align: center;
  }
@@ -522,8 +523,8 @@
  margin-top: 1px;
  }
  .event.rev .event-icon { padding-right: 0; }
- .event.rev .event-time { color: #FF7724; }
- .event.rev .event-name { color: #FF7724; }
+ .event.rev .event-time { color: var(--blue); }
+ .event.rev .event-name { color: var(--blue); }
 
  .event-sub {
  font-size: 11px;
@@ -623,7 +624,7 @@
  transition: background .3s, transform .3s;
  }
  .dot.active {
- background: var(--orange);
+ background: var(--blue);
  transform: scale(1.3);
  }
 
@@ -651,25 +652,25 @@
  .rsvp-label {
  display: block;
  font-size: 14px;
- color: var(--orange);
+ color: var(--blue);
  margin-bottom: 6px;
  }
- .rsvp-req { color: #FF7724; }
+ .rsvp-req { color: #3568FD; }
  .rsvp-opt { font-size: 11px; color: var(--muted); }
  .rsvp-input {
  width: 100%;
  padding: 10px 14px;
- border: 1.5px solid #E0D9BE;
+ border: 1.5px solid #bed7e0;
  border-radius: 12px;
- background: #FEFCF0;
+ background: #f0fefe;
  font-family: 'SingleDay-Regular', sans-serif;
  font-size: 13px;
  color: var(--text);
  outline: none;
  transition: border-color .2s;
  }
- .rsvp-input:focus { border-color: var(--orange); }
- .rsvp-input.invalid { border-color: #e55; }
+ .rsvp-input:focus { border-color: var(--blue); }
+ .rsvp-input.invalid { border-color: #3568FD; }
  .rsvp-textarea {
  resize: none;
  height: 88px;
@@ -681,9 +682,9 @@
  .toggle-btn {
  flex: 1;
  padding: 10px;
- border: 1.5px solid #E0D9BE;
+ border: 1.5px solid #bed7e0;
  border-radius: 12px;
- background: #FEFCF0;
+ background: #f0fefe;
  font-family: 'SingleDay-Regular', sans-serif;
  font-size: 14px;
  color: var(--muted);
@@ -691,8 +692,8 @@
  transition: all .2s;
  }
  .toggle-btn.active-yes {
- border-color: var(--orange);
- background: var(--orange);
+ border-color: var(--blue);
+ background: var(--blue);
  color: #fff;
  }
  .toggle-btn.active-no {
@@ -700,18 +701,18 @@
  background: var(--blue);
  color: #fff;
  }
- .toggle-btn.invalid { border-color: #e55; }
+ .toggle-btn.invalid { border-color: #3568FD; }
  .rsvp-error {
  display: none;
  font-size: 11px;
- color: #e55;
+ color: #fdb435;
  margin-top: 4px;
  }
  .rsvp-error.show { display: block; }
  .rsvp-submit {
  width: 100%;
  padding: 14px;
- background: var(--orange);
+ background: var(--blue);
  border: none;
  border-radius: 14px;
  font-family: 'SingleDay-Regular', sans-serif;
@@ -776,14 +777,14 @@
  }
  .cover-names {
  font-size: clamp(48px, 17vw, 72px);
- color: #FFBA26;
+ color: #298CFE;
  line-height: 0.9;
  text-align: center;
  }
- .cover-names .amp { color: #4A66F5; font-size: 0.7em; }
+ .cover-names .amp { color: #FFBA26; font-size: 0.7em; }
  .cover-date {
  font-size: clamp(18px, 6vw, 28px);
- color: var(--blue);
+ color: var(--orange);
  letter-spacing: 2px;
  margin-top: 4px;
  }
@@ -796,14 +797,14 @@
  .cover-btn {
  margin-top: 16px;
  padding: 14px 40px;
- background: var(--orange);
+ background: var(--blue);
  border: none;
  border-radius: 50px;
  font-family: 'SingleDay-Regular', sans-serif;
  font-size: 20px;
  color: #fff;
  cursor: pointer;
- box-shadow: 0 4px 18px rgba(255,119,36,0.35);
+ box-shadow: 0 4px 18px rgba(36, 138, 255, 0.35);
  transition: transform .2s, box-shadow .2s;
  animation: btnPulse 2s ease-in-out infinite;
  }
@@ -863,7 +864,7 @@
  background: transparent;
  }
  #rsvp-messages-list::-webkit-scrollbar-thumb {
- background: #E0D9BE;
+ background: #bec6e0;
  border-radius: 4px;
  }
 
@@ -876,12 +877,12 @@
  }
  .message-name {
  font-size: 14px;
- color: var(--orange);
+ color: var(--blue);
  margin-bottom: 4px;
  }
  .message-pesan {
  font-size: 12px;
- color: #666;
+ color: #666666;
  line-height: 1.6;
  }
 
@@ -942,10 +943,10 @@
  <div class="cover-inner">
  <p class="cover-label">Undangan Pernikahan</p>
  <div class="cover-names">
- AUZAN<br><span class="amp">&</span><br>AISYA
+ AISYA<br><span class="amp">&</span><br>AUZAN
  </div>
  <div class="cover-divider"></div>
- <p class="cover-date">07 . 08 . 2026</p>
+ <p class="cover-date">09 . 08 . 2026</p>
  <div class="cover-divider"></div>
  <p class="cover-invite">Untuk <span id="cover-guest-name">Bapak/Ibu/Saudara</span></p>
  <button class="cover-btn" id="cover-btn">Buka Undangan</button>
@@ -959,7 +960,7 @@
 
  <div class="hero-names">
  <span class="name-1">AUZAN</span>
- <span class="name-2"><span class="amp-and">&</span> AISYA</span>
+ <span class="name-2"><span class="amp-and">&</span>AISYA</span>
  </div>
 
  <div class="hero-visual">
@@ -986,7 +987,6 @@
  <!-- Vector 5 around blob -->
  <img src="Vector 5.svg" class="blob-deco bd1" alt="">
  <img src="Vector 5.svg" class="blob-deco bd2" alt="">
- <img src="Vector 5.svg" class="blob-deco bd3" alt="">
  <img src="Vector 5.svg" class="blob-deco bd4" alt="">
  <img src="Vector 5.svg" class="blob-deco bd5" alt="">
  <img src="Vector 5.svg" class="blob-deco bd6" alt="">
@@ -995,7 +995,7 @@
  </section>
 
  <div style="text-align:center; padding: 2px 0 16px; background: var(--cream);">
- <span class="hero-date">07.08.2026</span>
+ <span class="hero-date">09.08.2026</span>
  </div>
 
  <div class="divider"></div>
@@ -1010,17 +1010,17 @@
 
  <!-- ══ § 4b INTRO PASANGAN ═════════════════════════════ -->
  <div style="position:relative; overflow:hidden;">
- <canvas id="ribbon-canvas" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0;"></canvas>
- <div class="reveal" style="display:flex; flex-direction:column; gap:16px; padding: 0 24px 24px; position:relative; z-index:1;">
- <div style="display:flex; align-items:center; gap:12px; justify-content:flex-end;">
- <p class="sec-body" style="text-align:left; font-size:11px; padding: 12px; text-align:center;">Putri Ketiga dari Bapak Bambang Samodro Wicaksono dan Ibu Rosida Nurrahmi</p>
- <div class="polaroid tentang-photo" data-popup-date="Lahir di Kediri, 29 Oktober 2022" style="width:48%; flex-shrink:0;"><div class="polaroid-inner"><img src="photo/Frame 2.png" alt="Foto 1"></div><div class="polaroid-date">Aisya Nur Kamila</div></div>
- </div>
- <div style="display:flex; align-items:center; gap:12px; justify-content:flex-start;">
- <div class="polaroid tentang-photo" data-popup-date="Lahir di Surabaya, 01 Oktober 1999" style="width:48%; flex-shrink:0;"><div class="polaroid-inner"><img src="photo/Frame 1.png" alt="Foto 2"></div><div class="polaroid-date">Fathullah Auzan Setyo Laksono</div></div>
- <p class="sec-body" style="text-align:left; font-size:11px; padding: 12px; text-align:center;">Putra Tunggal dari Bapak Agus Tjahyo Subagyo dan Ibu Setya Budi Mulyanti</p>
- </div>
- </div>
+    <canvas id="ribbon-canvas" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0;"></canvas>
+    <div class="reveal" style="display:flex; flex-direction:column; gap:16px; padding: 0 24px 24px; position:relative; z-index:1;">
+        <div style="display:flex; align-items:center; gap:12px; justify-content:flex-start;">
+            <div class="polaroid tentang-photo" data-popup-date="Lahir di Surabaya, 01 Oktober 1999" style="width:48%; flex-shrink:0;"><div class="polaroid-inner"><img src="photo/Frame 1.png" alt="Foto 2"></div><div class="polaroid-date">Fathullah Auzan Setyo Laksono</div></div>
+            <p class="sec-body" style="text-align:left; font-size:11px; padding: 12px; text-align:center;">Putra Tunggal dari Bapak Agus Tjahyo Subagyo dan Ibu Setya Budi Mulyanti</p>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; justify-content:flex-end;">
+            <p class="sec-body" style="text-align:left; font-size:11px; padding: 12px; text-align:center;">Putri Ketiga dari Bapak Bambang Samodro Wicaksono dan Ibu Rosida Nurrahmi</p>
+            <div class="polaroid tentang-photo" data-popup-date="Lahir di Kediri, 29 Oktober 2022" style="width:48%; flex-shrink:0;"><div class="polaroid-inner"><img src="photo/Frame 2.png" alt="Foto 1"></div><div class="polaroid-date">Aisya Nur Kamila</div></div>
+        </div>
+    </div>
  </div>
 
 <!-- ══ § 5 BULAN ═══════════════════════════════════ -->
@@ -1029,23 +1029,23 @@
  <section class="section reveal">
  <h2 class="sec-title">AGUSTUS</h2>
  <div class="dates-row">
- <div class="date-chip">Sel</div>
- <div class="date-chip">Rab</div>
  <div class="date-chip">Kam</div>
  <div class="date-chip">Jum</div>
  <div class="date-chip">Sab</div>
  <div class="date-chip">Min</div>
+ <div class="date-chip">Sen</div>
+ <div class="date-chip">Sel</div>
  </div>
  <div class="dates-row">
- <div class="date-chip">4</div>
- <div class="date-chip">5</div>
  <div class="date-chip">6</div>
+ <div class="date-chip">7</div>
+ <div class="date-chip">8</div>
  <div class="date-chip-wrap">
  <img src="Vector 38.svg" class="date-active-bg" alt="">
- <div class="date-chip active">7</div>
+ <div class="date-chip active">9</div>
  </div>
- <div class="date-chip">8</div>
- <div class="date-chip">9</div>
+ <div class="date-chip">10</div>
+ <div class="date-chip">11</div>
  </div>
  </section>
 
@@ -1053,10 +1053,10 @@
 
  <!-- ══ § 6 TEMPAT ══════════════════════════════════ -->
  <section class="section reveal">
- <h2 class="sec-title">KEBOEN RODJO</h2>
+ <h2 class="sec-title">Bumi Wonorejo Asri</h2>
  <div class="venue-wrap">
- <p class="venue-name">Restoran Keboen Rodjo Kediri</p>
- <p class="venue-addr">Jl. Mayor Bismo No.419, Semampir, Kabupaten Kediri, Jawa Timur</p>
+ <p class="venue-name">Kediaman Bapak Agus Tjahyo</p>
+ <p class="venue-addr">Jl. Bumi Wonorejo Asri A4 NO.108, Rungkut, Kota Surabaya, Jawa Timur</p>
  </div>
  </section>
 
@@ -1065,7 +1065,7 @@
  <!-- ══ § 7 DINING TABLE ILLUSTRATION ══════════════ -->
  <div class="dining-wrap reveal">
  <img src="eatPlace.svg" alt="Ilustrasi meja makan">
- <a href="https://maps.app.goo.gl/iHtgQDjHsYA4arFx8" target="_blank" rel="noopener" class="rodjo-link">
+ <a href="https://maps.app.goo.gl/ETxbsW71tdnvvmQW9" target="_blank" rel="noopener" class="rodjo-link">
  <img src="gmap.webp" class="rodjo-overlay" alt="Rodjo">
  </a>
  </div>
@@ -1077,21 +1077,21 @@
  <h2 class="jadwal-title">Jadwal Acara</h2>
 
  <!-- Event 1 -->
- <div class="event">
+ <!-- <div class="event">
  <div class="event-info">
- <div class="event-time">08:00</div>
+ <div class="event-time">7 Agustus 2026</div>
  <div class="event-name">Akad Nikah</div>
- <div class="event-sub">KUA MOJOROTO</div>
+ <div class="event-sub">Kediri(keluarga inti) </div>
  </div>
  <img src="Group.svg" class="event-icon" alt="">
- </div>
+ </div> -->
 
  <!-- Event 2 -->
  <div class="event rev">
  <div class="event-info">
  <div class="event-time">12:30</div>
  <div class="event-name">Makan Bersama</div>
- <div class="event-sub">Restoran Keboen Rodjo</div>
+ <div class="event-sub">Rumah Bapak Agus Tjahyo</div>
  </div>
  <img src="Group 32.svg" class="event-icon" alt="">
  </div>
@@ -1107,9 +1107,9 @@
 
  <div class="photo-carousel reveal">
  <div class="carousel-track">
- <div class="carousel-slide"><div class="polaroid"><div class="polaroid-inner"><img src="photo/photo1.jpeg" alt="Foto 1"></div><div class="polaroid-date">Satu Sama Lain</div></div></div>
- <div class="carousel-slide"><div class="polaroid"><div class="polaroid-inner"><img src="photo/photo2.jpeg" alt="Foto 2"></div><div class="polaroid-date">Gombalan Mr.Ollie</div></div></div>
- <div class="carousel-slide"><div class="polaroid"><div class="polaroid-inner"><img src="photo/photo3.jpeg" alt="Foto 3"></div><div class="polaroid-date">Memutuskan untuk Bersama ♡ </div></div></div>
+ <div class="carousel-slide"><div class="polaroid"><div class="polaroid-inner"><img src="photo/photo1.png" alt="Foto 1"></div><div class="polaroid-date">Awal bertemu</div></div></div>
+ <div class="carousel-slide"><div class="polaroid"><div class="polaroid-inner"><img src="photo/photo2.png" alt="Foto 2"></div><div class="polaroid-date">Mengenal lebih jauh</div></div></div>
+ <div class="carousel-slide"><div class="polaroid"><div class="polaroid-inner"><img src="photo/photo3.png" alt="Foto 3"></div><div class="polaroid-date">Memutuskan untuk Bersama ♡ </div></div></div>
  </div>
  <div class="carousel-dots">
  <span class="dot active"></span>
@@ -1120,7 +1120,7 @@
 
  <section class="section">
  <p class="sec-body photo-desc" id="photo-desc">
- Gak ngira bakal ngobrol
+ Kami "kebetulan" ketemuan di ruang meeting yang sebenernya gak mesti dateng. Dan, "kebetulan" pas sama-sama baru masuk. "Kebetulan" juga dari daerah yang sama, dan masih banyak persamaan lain. Semua kebetulan itu, berujung ke rasa penasaran.
  </p>
  </section>
 
@@ -1134,7 +1134,7 @@
  <!-- Nama -->
  <div class="rsvp-field">
  <label class="rsvp-label">Nama <span class="rsvp-req">*</span></label>
- <input type="text" id="rsvp-nama" class="rsvp-input" placeholder="Masukkan nama kamu">
+ <input type="text" id="rsvp-nama" class="rsvp-input" placeholder="Masukan nama kamu">
  <span class="rsvp-error" id="err-nama">Nama wajib diisi</span>
  </div>
 
@@ -1288,9 +1288,9 @@ initCarousel(
  document.querySelector('.photo-carousel:not(#carousel-tentang)'),
  document.getElementById('photo-desc'),
  [
- 'Gak ngira bakal ngobrol',
- 'Mr. Ollie',
- 'Mantap bersama'
+ 'Kami "kebetulan" ketemuan di ruang meeting yang sebenernya gak mesti dateng. Dan, "kebetulan" pas sama-sama baru masuk. "Kebetulan" juga dari daerah yang sama, dan masih banyak persamaan lain. Semua kebetulan itu, berujung ke rasa penasaran.',
+ 'Dari cuma penasaran, ngobrolin kantor, sampe makin kenal satu sama lain. Nggak butuh lama buat tau karakter masing-masing. Ribuan "maaf", tapi juga "makasih", kami tau kami nggak cuma mirip tapi bisa melengkapi dan mendukung ke arah yang lebih baik.',
+ 'Agustus ini, kami bakal melangkah ke hubungan yang lebih serius. Menjadi pasangan, sahabat, dan rumah satu sama lain. Saling membimbing untuk dunia akhirat. Selamanya.'
  ]
  );
 
@@ -1496,11 +1496,11 @@ initCarousel(
  window.addEventListener('resize', resize);
 
  const COLORS = [
- 'rgba(255,186,38,0.18)',
- 'rgba(255,119,36,0.14)',
- 'rgba(53,104,253,0.12)',
- 'rgba(98,109,212,0.13)',
- 'rgba(200,185,122,0.15)'
+ 'rgba(198,224,254,0.18)',
+ 'rgba(42,109,241,0.14)',
+ 'rgba(179,205,255,0.12)',
+ 'rgba(53,104,253,0.13)',
+ 'rgba(198,224,254,0.18)'
  ];
 
  let activeHearts = 0;
@@ -1578,7 +1578,7 @@ initCarousel(
  const layerOpacity = [0.15, 0.35, 0.65][this.layerIndex] ?? 0.35;
  ctx.save();
  ctx.globalAlpha = this.isHeart ? fade * 0.45 : fade * layerOpacity;
- ctx.strokeStyle = this.isHeart ? 'rgba(255,119,36,0.45)' : this.color;
+ ctx.strokeStyle = this.isHeart ? 'rgba(42,109,241,0.14)' : this.color;
  ctx.lineWidth = this.isHeart ? this.width + 2 : this.width * ([0.8, 1.2, 1.8][this.layerIndex] ?? 1);
  ctx.lineCap = 'round';
  ctx.lineJoin = 'round';
@@ -1654,39 +1654,21 @@ initCarousel(
  pop.addEventListener('animationend', () => pop.remove());
  });
 
- // ── Group.svg "Sah?" pop ──────────────────────────
- document.querySelector('.event-icon[src="Group.svg"]').addEventListener('click', function(e) {
- const rect = this.getBoundingClientRect();
- const x = e.clientX - rect.left + rect.width / 2;
- const y = e.clientY - rect.top;
-
- const sah = document.createElement('div');
- sah.className = 'sah-pop';
- sah.textContent = 'Sah?';
- sah.style.position = 'fixed';
- sah.style.left = '50vw';
- sah.style.top = (rect.top + rect.height / 2) + 'px';
-
- document.body.appendChild(sah);
- sah.addEventListener('animationend', () => sah.remove());
- });
-
- // ── Group 32.svg Rodjo image pop ─────────────────
+ // ── Group 32.svg "Sah?" pop ──────────────────────────
  document.querySelector('.event-icon[src="Group 32.svg"]').addEventListener('click', function(e) {
- const rect = this.getBoundingClientRect();
+    const rect = this.getBoundingClientRect();
+    const x = e.clientX - rect.left + rect.width / 2;
+    const y = e.clientY - rect.top;
 
- const pop = document.createElement('img');
- pop.src = 'Rodjo.svg';
- pop.className = 'sah-pop';
- pop.style.position = 'fixed';
- pop.style.left = '50vw';
- pop.style.top = (rect.top + rect.height / 2) + 'px';
- pop.style.width = '80px';
- pop.style.height = 'auto';
- pop.style.fontSize = 'unset';
+    const sah = document.createElement('div');
+    sah.className = 'sah-pop';
+    sah.textContent = 'Mangan sek lur!';
+    sah.style.position = 'fixed';
+    sah.style.left = '50vw';
+    sah.style.top = (rect.top + rect.height / 4) + 'px';
 
- document.body.appendChild(pop);
- pop.addEventListener('animationend', () => pop.remove());
+    document.body.appendChild(sah);
+    sah.addEventListener('animationend', () => sah.remove());
  });
 
  // ── Blob click pop (Instagram-like) ───────────────
